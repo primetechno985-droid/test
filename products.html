@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Bazaar - E-commerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-mark">DB</div>
+                <span class="logo-text">Digital Bazaar</span>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Search products...">
+                <button class="search-btn">Search</button>
+            </div>
+
+            <div class="nav-links-container">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="cart-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Featured Hero Section -->
+    <section class="featured-section">
+        <div class="featured-content">
+            <h2>Crafted by</h2>
+            <p>milofashion</p>
+            <!-- Convert featured items to carousel with navigation controls -->
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-btn-prev" id="prevBtn">❮</button>
+                <div class="featured-items-carousel">
+                    <div class="featured-item" data-slide="0">
+                        <img src="fashion.jpg" alt="Luxury Leather">
+                        <span>Luxury Leather</span>
+                    </div>
+                    <div class="featured-item" data-slide="1">
+                        <img src="blue tshirt.jpg" alt="Premium Set">
+                        <span>Premium Set</span>
+                    </div>
+                    <div class="featured-item" data-slide="2">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Trendy Kicks">
+                        <span>Trendy Kicks</span>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-next" id="nextBtn">❯</button>
+            </div>
+            <div class="carousel-indicators">
+                <button class="indicator active" data-index="0"></button>
+                <button class="indicator" data-index="1"></button>
+                <button class="indicator" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Enter the digital bazaar, where every click leads to excitement</h1>
+            <p class="hero-subtitle">Discover top-quality products, home essentials, and fashion — all in one place. Experience technology and lifestyle in harmony.</p>
+            <button class="cta-button">Go to Wonders</button>
+            <button class="cta-button-secondary">Request free product</button>
+        </div>
+        <div class="hero-image">
+            <img src="/placeholder.svg?height=400&width=400" alt="Hero Model">
+        </div>
+    </section>
+
+    <!-- Product Categories Filter -->
+    <section class="categories-filter">
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">Product category</button>
+            <button class="filter-btn" data-category="fashion">Men</button>
+            <button class="filter-btn" data-category="accessories">Accessories</button>
+            <button class="filter-btn" data-category="gadgets">Sales</button>
+        </div>
+        <div class="search-filter">
+            <input type="text" placeholder="Search" class="search-filter-input">
+        </div>
+    </section>
+
+    <section class="featured-collection">
+    <h3 class="collection-title">Featured clothing</h3>
+    <div class="featured-grid">
+        <div class="featured-product featured-large">
+            <img src="homo_logo.jpg" alt="homo logo">
+            <div class="product-label">COLORWAY</div>
+            <h4>Modern Bomber Jacket</h4>
+            <p class="product-price">$159.99</p>
+        </div>
+        <div class="featured-product">
+            <img src="blue_shirt.jpg" alt="Blue Shirt">
+            <div class="product-label">COLORWAY</div>
+            <h4>Blue Casual Shirt</h4>
+            <p class="product-price">$89.99</p>
+        </div>
+        <div class="featured-product">
+            <img src="sunglasses.jpg" alt="Glasses">
+            <div class="product-label">COLORWAY</div>
+            <h4>Stylish Sunglasses</h4>
+            <p class="product-price">$129.99</p>
+        </div>
+        <div class="featured-product">
+            <img src="orange_tee.jpg" alt="Orange Shirt">
+            <div class="product-label">COLORWAY</div>
+            <h4>Vibrant Orange Tee</h4>
+            <p class="product-price">$49.99</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Products Grid Section -->
+    <section class="products-section" id="products">
+        <h2 class="section-title">All Products</h2>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Featured Blog Section -->
+    <section class="blog-section">
+        <div class="blog-content">
+            <img src="/placeholder.svg?height=300&width=400" alt="Sneakers">
+            <div class="blog-text">
+                <h2>Up There Athletics X On Running Crew Relay Unveils the Art of Performance!</h2>
+                <p>When every step is a masterpiece, every step is a symphony. Join us on the ultimate adventure as we explore the synergy of style and performance like never before with our latest collection.</p>
+                <button class="blog-button">Start shopping now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>About Digital Bazaar</h4>
+                <p>Your one-stop shop for premium quality products at unbeatable prices. We deliver excellence.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/gensanprimetechno" class="social-link">Facebook</a>
+                    <a href="https://shopee.ph/primetechno?entryPoint=ShopBySearch&searchKeyword=prime%20techno" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Digital Bazaar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

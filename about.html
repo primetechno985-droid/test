@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Prime Techno</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1f2937;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR UNDERLINE HOVER EFFECT */
+    .nav-link {
+      position: relative;
+      padding-bottom: 6px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, #f7a800);
+      border-radius: 999px;
+      transition: width 0.35s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::backdrop {
+      width: 100%;
+    }
+
+    
+
+    /* HERO */
+    .bg-animate {
+      background: linear-gradient(135deg, #ffffff, #f4f7fb, #ffffff);
+      background-size: 200% 200%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* SCROLL ANIMATION */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+  </style>
+</head>
+
+<body>
+  
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+<a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-[navy]">
+  <img src="logooo.png" alt="Prime Techno Logo" class="w-[55px] h-auto">
+  <span>Prime Techno</span>
+</a>
+
+
+    <div class="hidden md:flex space-x-8 font-medium">
+      <a href="index.html" class="nav-link text-gray-700">Home</a>
+      <a href="about.html" class="nav-link active text-blue-600">About</a>
+
+      <div class="relative group">
+        <span class="nav-link text-gray-700 cursor-pointer">Contact</span>
+        <div class="absolute hidden group-hover:block bg-white border border-gray-200 mt-2 rounded-lg shadow-md w-40">
+          <a href="https://www.facebook.com/gensanprimetechno" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Facebook</a>
+          <a href="https://shopee.ph" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Shopee</a>
+        </div>
+      </div>
+    </div>
+
+    <button id="menu-btn" class="md:hidden text-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <a href="index1.html" class="block py-3 px-6 text-gray-700 hover:text-blue-600">Home</a>
+    <a href="about.html" class="block py-3 px-6 text-blue-600">About</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="bg-animate h-[60vh] flex flex-col justify-center items-center text-center mt-20">
+  <h1 class="text-5xl font-bold mb-4 text-gray-900">
+    About <span class="text-blue-600">Prime Tecno</span>
+  </h1>
+  <p class="text-lg text-gray-600">Innovating Everyday Essentials</p>
+</section>
+
+<!-- ABOUT -->
+<section class="py-20 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center fade-up">
+  <img src="cover.png" class="rounded-2xl shadow-md">
+  <div>
+    <h2 class="text-3xl font-bold mb-4 text-gray-900">Who We Are</h2>
+    <p class="text-gray-600 leading-relaxed">
+      Prime Tecno is a merchandising store committed to providing quality and affordable products —
+      from household essentials to the latest gadgets.
+    </p>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="py-20 px-6 md:px-20 bg-gray-50 fade-up">
+  <h2 class="text-3xl font-bold text-center mb-12">Our Mission & Vision</h2>
+
+  <div class="grid md:grid-cols-2 gap-10">
+    <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+      <h3 class="text-2xl font-semibold mb-3 text-blue-600">Mission</h3>
+      <p class="text-gray-600">
+        To deliver innovative and affordable products that enhance everyday life.
+      </p>
+    </div>
+
+    <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+      <h3 class="text-2xl font-semibold mb-3 text-blue-600">Vision</h3>
+      <p class="text-gray-600">
+        To be the leading merchandising store recognized for innovation and trust.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MEET OUR TEAM (RESTORED) 
+<section class="py-20 px-6 md:px-20 fade-up">
+  <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Meet Our Team</h2>
+
+  <div class="grid md:grid-cols-3 gap-10">
+    <div class="bg-white p-6 rounded-2xl text-center shadow-md hover:shadow-lg transition">
+      <img src="hazel.jpg" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+      <h3 class="text-xl font-semibold">QUEENCY</h3>
+      <p class="text-gray-500">Muse of Prime</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl text-center shadow-md hover:shadow-lg transition">
+      <img src="JAYSON.jpg" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+      <h3 class="text-xl font-semibold">JAYSON</h3>
+      <p class="text-gray-500">CEO</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl text-center shadow-md hover:shadow-lg transition">
+      <img src="hero.jpg" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+      <h3 class="text-xl font-semibold">PEDRO POGI</h3>
+      <p class="text-gray-500">Manager</p>
+    </div>
+  </div>
+</section> -->
+
+<!-- CONTACT -->
+<section class="py-20 bg-gray-100 text-center fade-up">
+  <h2 class="text-3xl font-bold mb-4">Let’s Connect!</h2>
+  <p class="text-gray-600 mb-6">Follow Prime Tecno on Facebook for updates.</p>
+  <a href="https://www.facebook.com/gensanprimetechno" target="_blank"
+     class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition">
+    Contact Us
+  </a>
+</section>
+
+<script>
+  document.getElementById("menu-btn").addEventListener("click", () => {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+  });
+
+  const fadeElements = document.querySelectorAll(".fade-up");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
